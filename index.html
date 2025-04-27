@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Student Portfolio">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Amrit A Kalmane</h1>
+        <p>Student Developer | Event Manager | Video Editor</p>
+        <a href="#portfolio" class="btn" id="seeWorkBtn">See My Work</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="fade-in">
+        <h2>About Me</h2>
+        <p>I’m Amrit, a highly motivated BCA student with a strong passion for technology and a focus on security. I have hands-on experience in Python, Arduino, and AI, and I specialize in developing innovative, security-focused IoT projects using real-time models to tackle complex challenges. My goal is to bridge cutting-edge technology with practical applications, particularly in enhancing security systems for the connected world. I have worked on various projects that integrate IoT and AI, leveraging my skills in coding and real-time data analysis to create efficient, reliable, and secure solutions. As I continue to build my expertise, I am excited to collaborate on projects that push my limits and help me grow professionally. Motivated by a desire to create impactful solutions, I am seeking opportunities to apply my skills in a dynamic and challenging environment, particularly in the intersection of IoT, AI, and cybersecurity.</p>
+        <div class="skills">
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- My Work Section -->
+    <section id="portfolio" class="fade-in">
+        <h2>My Work</h2>
+        <div class="projects">
+            <!-- Project Titles -->
+            <div class="project-title">
+                <button class="project-btn" onclick="toggleProject('html')">HTML Projects</button>
+                <div id="html" class="project-content" style="display: none;">
+                    <h3>HTML Projects</h3>
+                    <p>Details about HTML projects.</p>
+                    <a href="#" class="btn">View HTML Projects</a>
+                </div>
+            </div>
+    
+            <div class="project-title">
+                <button class="project-btn" onclick="toggleProject('python')">Python Projects</button>
+                <div id="python" class="project-content" style="display: none;">
+                    <h3>Python Projects</h3>
+                    <p>Various Projects based on Real-time and Machine Learning Programs.</p>
+                    <a href="https://github.com/AmritKalmane20/Projects" class="btn">View Python Projects</a>
+                </div>
+            </div>
+    
+            <div class="project-title">
+                <button class="project-btn" onclick="toggleProject('javascript')">JavaScript Projects</button>
+                <div id="javascript" class="project-content" style="display: none;">
+                    <h3>JavaScript Projects</h3>
+                    <p>Details about JavaScript projects.</p>
+                    <a href="#" class="btn">View JavaScript Projects</a>
+                </div>
+            </div>
+    
+            <div class="project-title">
+                <button class="project-btn" onclick="toggleProject('css')">CSS Projects</button>
+                <div id="css" class="project-content" style="display: none;">
+                    <h3>CSS Projects</h3>
+                    <p>Details about Random projects.</p>
+                    <a href="#" class="btn">View random Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    <!-- Contact Section -->
+    <section id="contact" class="fade-in">
+        <h2>Contact Me</h2>
+        <p>Get in touch with me!</p>
+        <ul>
+            <li><a href="mailto:amritakalmane@gmail.com">E-mail</a></li>
+            <li><a href="https://www.linkedin.com/in/amrit-kalmane-345b3b244/">LinkedIn</a></li>
+            <li><a href="https://github.com/AmritKalmane20">GitHub</a></li>
+            <li><a href="https://instagram.com/amritakalmane">Instagram</a></li>
+        </ul>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
