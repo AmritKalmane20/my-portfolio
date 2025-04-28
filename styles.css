@@ -1,11 +1,11 @@
-/* Reset some default browser styles */
+/* ========== RESET ========== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body and basic font settings */
+/* ========== BODY ========== */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -13,7 +13,7 @@ body {
     color: #ffffff;
 }
 
-/* Navigation Styles */
+/* ========== NAVIGATION ========== */
 nav {
     position: fixed;
     width: 100%;
@@ -43,7 +43,7 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Hero Section */
+/* ========== HERO SECTION ========== */
 .hero {
     height: 100vh;
     background: url("C:/Users/Amrit Kalmane/Downloads/design-black-background-lh6hd1i0ecusnwzg-1524468668.jpg") no-repeat center center/cover;
@@ -62,13 +62,11 @@ nav ul li a:hover {
     font-size: 4rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #ffffff;
 }
 
 .hero p {
     font-size: 1.8rem;
     margin: 10px 0;
-    color: #ffffff;
 }
 
 .hero .btn {
@@ -88,6 +86,7 @@ nav ul li a:hover {
     animation: glowing 1.5s infinite alternate;
 }
 
+/* Glow animation */
 @keyframes glowing {
     0% {
         box-shadow: 0 0 5px #ffffff;
@@ -97,12 +96,11 @@ nav ul li a:hover {
     }
 }
 
-/* Fade-In Effect */
+/* Fade-In and Slide-In Effects */
 .fade-in {
     animation: fadeIn 2s ease-in-out;
 }
 
-/* Slide-In Effect */
 .slide-in {
     animation: slideIn 1s ease-out;
 }
@@ -127,7 +125,7 @@ nav ul li a:hover {
     }
 }
 
-/* About Section */
+/* ========== ABOUT SECTION ========== */
 #about {
     padding: 60px 20px;
     text-align: center;
@@ -137,9 +135,9 @@ nav ul li a:hover {
 #about h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #ffffff;
 }
 
+/* Skills list inside About */
 .skills ul {
     list-style-type: none;
     display: flex;
@@ -154,7 +152,7 @@ nav ul li a:hover {
     border-radius: 3px;
 }
 
-/* Portfolio Section */
+/* ========== PORTFOLIO SECTION ========== */
 #portfolio {
     padding: 30px 10px;
     background: #000000;
@@ -164,73 +162,68 @@ nav ul li a:hover {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 40px;
-    color: #ffffff;
 }
 
+/* My Projects Box */
+.my-project-box {
+    display: inline-block;
+    background: #000000;
+    color: #fff;
+    padding: 30px 60px;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px #ffffff88;
+}
+
+.my-project-box:hover {
+    background: #111;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ffffffaa;
+}
+
+/* Project Titles and Boxes */
 .projects {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.project {
-    width: 300px;
-    background: #000000;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(250, 249, 249, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
-}
-
-.project img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.project-info {
-    padding: 20px;
-}
-
-.project-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #ffffff;
-}
-
-.project-info p {
-    font-size: 1rem;
-    margin-bottom: 15px;
-    color: #ffffff;
-}
-
-.project-info .btn {
-    background: #333;
-    color: #ffffff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-info .btn:hover {
-    background: #000000;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
-    animation: glowing 1.5s infinite alternate;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
 }
 
 .project-title {
-    margin-bottom: 10px;
+    background: #fff;
+    color: #863131;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    transform: scale(0.9);
+    transition: transform 0.5s ease;
 }
 
-/* Button Styles */
-/* General Button Styles */
+.project-title:hover {
+    transform: scale(1);
+}
+
+/* ========== BUTTONS GENERAL ========== */
+.btn {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 15px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background: #333;
+    transform: scale(1.1);
+}
+
+/* Project Toggle Buttons */
 .project-btn {
     background-color: #333;
     color: white;
@@ -239,14 +232,11 @@ nav ul li a:hover {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s, transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    overflow: hidden;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
     display: block;
     margin: 10px auto;
 }
 
-/* Hover and Active Button Effects */
 .project-btn:hover {
     background-color: #555;
     transform: scale(1.1);
@@ -258,22 +248,22 @@ nav ul li a:hover {
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
 }
 
-/* Centering and Animation for Project Content Below the Button */
+/* ========== PROJECT CONTENT ========== */
 .project-content {
     display: none;
-    background-color: #000; /* Black background */
-    color: #fff; /* White text */
+    background-color: #000;
+    color: #fff;
     padding: 20px;
     border-radius: 10px;
     margin-top: 20px;
-    width: 80%; /* Adjust width to your preference */
-    max-width: 600px; /* Max width for the content */
+    width: 80%;
+    max-width: 600px;
     margin-left: auto;
-    margin-right: auto; /* Centers the content horizontally */
+    margin-right: auto;
     animation: fadeInUp 0.5s ease forwards;
 }
 
-/* Animation for revealing the project content */
+/* Project content fade-in */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -285,33 +275,23 @@ nav ul li a:hover {
     }
 }
 
-/* Project Section Titles */
-.project-content h3 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+/* Special Slide Down Animation */
+.slide-down {
+    animation: slideDown 0.5s ease forwards;
 }
 
-.project-content p {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.project-content .btn {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-.project-content .btn:hover {
-    background-color: #555;
-}
-
-
-/* Contact Section */
+/* ========== CONTACT SECTION ========== */
 #contact {
     padding: 60px 20px;
     text-align: center;
@@ -321,7 +301,6 @@ nav ul li a:hover {
 #contact h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #ffffff;
 }
 
 #contact ul {
@@ -331,7 +310,6 @@ nav ul li a:hover {
 #contact ul li {
     font-size: 1.2rem;
     margin: 10px 0;
-    color: #ffffff;
 }
 
 #contact ul li a {
@@ -344,13 +322,41 @@ nav ul li a:hover {
     color: #f5a623;
 }
 
-/* Parallax Effect */
-.hero {
-    background-attachment: fixed;
-    background-size: cover;
+/* Social Icons List in Contact */
+ul li img {
+    transition: transform 0.3s ease;
 }
 
-/* Media Queries for Mobile */
+ul li img:hover {
+    transform: scale(1.2);
+}
+
+/* ========== SOCIAL ICONS ========== */
+.social-icons {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.social-icons li {
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* ========== MEDIA QUERIES ========== */
 @media (max-width: 768px) {
     .projects {
         flex-direction: column;
@@ -359,4 +365,149 @@ nav ul li a:hover {
     .project {
         width: 100%;
     }
+
+    .project-title {
+        width: 90%;
+    }
+}
+
+.projects {
+    display: block;  /* Default for smaller screens */
+    margin-top: 30px;
+}
+
+.project-container {
+    display: flex;  /* Flexbox for side-by-side layout */
+    justify-content: center;  /* Center the boxes horizontally */
+    gap: 20px;  /* Add space between the boxes */
+    flex-wrap: wrap;  /* Allow wrapping for smaller screens */
+}
+
+.project-box {
+    background-color: rgb(255, 255, 255);  /* White background for each box */
+    color: black;  /* Black text color */
+    border: 2px solid #ccc;  /* Optional: Add border to the box */
+    border-radius: 10px;  /* Rounded corners */
+    padding: 20px;
+    width: 280px;  /* Fixed width for the boxes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Optional: Add subtle shadow */
+    transition: transform 0.3s ease-in-out;  /* Zoom-in effect */
+}
+
+.project-box:hover {
+    transform: scale(1.05);  /* Zoom-in effect on hover */
+}
+
+.project-box h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.project-box p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.project-box a {
+    display: inline-block;
+    background-color: #3498db;  /* Blue background for buttons */
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.project-box a:hover {
+    background-color: #2980b9;  /* Darker blue on hover */
+}
+
+/* Fade-In and Slide-In Effects */
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.slide-in {
+    animation: slideIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Achievements Section */
+#achievements {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #000000;
+}
+
+.certifications-container {
+    display: flex;
+    justify-content: center;  /* Center the certificates horizontally */
+    gap: 20px;  /* Add space between the certificates */
+    flex-wrap: wrap;  /* Allows wrapping for smaller screens */
+    padding: 20px;
+}
+
+.certificate-box {
+    background-color: #fff;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 280px;  /* Adjust the width of each box */
+    text-align: center;
+    transition: transform 0.3s ease;
+    margin: 10px;
+}
+
+.certificate-box:hover {
+    transform: scale(1.05);  /* Zoom-in effect when hovered */
+}
+
+.certificate-image {
+    width: 100%;
+    max-width: 250px;  /* Restrict the image size */
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.certificate-box p {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* Resume Button Style */
+.btn {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 15px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background: #333;
+    transform: scale(1.1);
 }

@@ -3,99 +3,293 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Student Portfolio">
-    <title>Your Name - Portfolio</title>
+    <meta name="description" content="Amrit Kalmane - Portfolio showcasing projects, skills, and contact info.">
+    <meta property="og:title" content="Amrit Kalmane Portfolio">
+    <meta property="og:description" content="Explore Amrit's projects, skills, certifications, and contact details.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="URL_TO_YOUR_PROFILE_IMAGE">
+    <meta property="og:url" content="YOUR_PORTFOLIO_LINK">
+    <title>Amrit Kalmane | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Styling for the "My Projects" Box */
+        #my-projects-box {
+            width: 70%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Hover effect for the box */
+        #my-projects-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Styling for the project list */
+        #project-list {
+            display: none;
+            margin-top: 30px;
+            text-align: center;
+            animation: slideDown 0.5s ease;
+        }
+
+        .project-title {
+            margin-bottom: 20px;
+        }
+
+        .project-title h3 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .project-title p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 5px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Slide Down Animation */
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Centering and Styling Project Cards */
+        .projects {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .project-title {
+            width: 80%;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-title:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Button Styling */
+        .btn {
+            background-color: #4CAF50;
+            border-radius: 5px;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Align project titles and descriptions in center */
+        .project-list-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .project-card {
+            width: 30%;
+            margin: 10px;
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <h1>Amrit A Kalmane</h1>
-        <p>Student Developer | Event Manager | Video Editor</p>
-        <a href="#portfolio" class="btn" id="seeWorkBtn">See My Work</a>
-    </section>
+<!-- Navigation -->
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Projects</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-    <!-- About Section -->
-    <section id="about" class="fade-in">
-        <h2>About Me</h2>
-        <p>I’m Amrit, a highly motivated BCA student with a strong passion for technology and a focus on security. I have hands-on experience in Python, Arduino, and AI, and I specialize in developing innovative, security-focused IoT projects using real-time models to tackle complex challenges. My goal is to bridge cutting-edge technology with practical applications, particularly in enhancing security systems for the connected world. I have worked on various projects that integrate IoT and AI, leveraging my skills in coding and real-time data analysis to create efficient, reliable, and secure solutions. As I continue to build my expertise, I am excited to collaborate on projects that push my limits and help me grow professionally. Motivated by a desire to create impactful solutions, I am seeking opportunities to apply my skills in a dynamic and challenging environment, particularly in the intersection of IoT, AI, and cybersecurity.</p>
-        <div class="skills">
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Python</li>
-            </ul>
-        </div>
-    </section>
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <h1 id="welcomeText" class="fade-in">Hi, I'm Amrit</h1>
+    <p class="slide-in">Security-Focused IoT & AI Enthusiast</p>
+    <a href="#my-projects" class="btn" id="viewMyWorkBtn">View My Work</a> <!-- Scrolls to My Projects Section -->
+    <a href="E:/Course/resume_2.pdf" download class="btn">My Resume</a>
+</section>
 
-    <!-- My Work Section -->
-    <section id="portfolio" class="fade-in">
-        <h2>My Work</h2>
-        <div class="projects">
-            <!-- Project Titles -->
-            <div class="project-title">
-                <button class="project-btn" onclick="toggleProject('html')">HTML Projects</button>
-                <div id="html" class="project-content" style="display: none;">
-                    <h3>HTML Projects</h3>
-                    <p>Details about HTML projects.</p>
-                    <a href="#" class="btn">View HTML Projects</a>
-                </div>
+<!-- About Section -->
+<section id="about">
+    <h2>About Me</h2>
+    <p>"I am a motivated BCA student with a deep passion for technology, particularly in the realm of real-time, security-driven IoT and AI projects. Throughout my academic journey, I have focused on leveraging the power of IoT devices and artificial intelligence to create innovative solutions that address security challenges in today's interconnected world. With a keen interest in real-time data processing and machine learning, I strive to build systems that not only function efficiently but also prioritize security, scalability, and user experience. My ultimate goal is to design intelligent, secure systems that can adapt to dynamic environments and provide valuable insights. I am constantly exploring new ways to integrate IoT, AI, and cybersecurity, and am excited to apply my skills to solve complex, real-world problems in a rapidly evolving technological landscape."</p>
+    <div class="skills">
+    </div>
+</section>
+
+
+
+<!-- My Projects Section -->
+<section id="my-projects" class="fade-in" style="text-align: center; padding: 50px;">
+    <div class="my-project-box" onclick="toggleProjects()">
+        <h2>My Projects</h2>
+    </div>
+
+    <div id="project-list" class="projects" style="display: none; margin-top: 30px;">
+        <!-- Container for project boxes -->
+        <div class="project-container">
+            <!-- Python Projects -->
+            <div class="project-box zoom-in">
+                <h3>Python Projects</h3>
+                <p>Projects based on Real-time models and Machine Learning Programs using Python.</p>
+                <a href="https://github.com/AmritKalmane20/Projects" target="_blank" class="btn">View Python Projects</a>
             </div>
-    
-            <div class="project-title">
-                <button class="project-btn" onclick="toggleProject('python')">Python Projects</button>
-                <div id="python" class="project-content" style="display: none;">
-                    <h3>Python Projects</h3>
-                    <p>Various Projects based on Real-time and Machine Learning Programs.</p>
-                    <a href="https://github.com/AmritKalmane20/Projects" class="btn">View Python Projects</a>
-                </div>
+
+            <!-- Machine Learning Projects -->
+            <div class="project-box zoom-in">
+                <h3>Machine Learning Projects</h3>
+                <p>Innovative Machine Learning based IoT security solutions and models.</p>
+                <a href="https://github.com/AmritKalmane20/Projects" target="_blank" class="btn">View ML Projects</a>
             </div>
-    
-            <div class="project-title">
-                <button class="project-btn" onclick="toggleProject('javascript')">JavaScript Projects</button>
-                <div id="javascript" class="project-content" style="display: none;">
-                    <h3>JavaScript Projects</h3>
-                    <p>Details about JavaScript projects.</p>
-                    <a href="#" class="btn">View JavaScript Projects</a>
-                </div>
-            </div>
-    
-            <div class="project-title">
-                <button class="project-btn" onclick="toggleProject('css')">CSS Projects</button>
-                <div id="css" class="project-content" style="display: none;">
-                    <h3>CSS Projects</h3>
-                    <p>Details about Random projects.</p>
-                    <a href="#" class="btn">View random Projects</a>
-                </div>
+
+            <!-- Real-Time Based Projects -->
+            <div class="project-box zoom-in">
+                <h3>Real-Time Based Projects</h3>
+                <p>Projects focused on live data processing and IoT real-time systems.</p>
+                <a href="https://github.com/AmritKalmane20/Projects" target="_blank" class="btn">View Realtime Projects</a>
             </div>
         </div>
-    </section>
-    
-    
-    
-    <!-- Contact Section -->
-    <section id="contact" class="fade-in">
-        <h2>Contact Me</h2>
-        <p>Get in touch with me!</p>
-        <ul>
-            <li><a href="mailto:amritakalmane@gmail.com">E-mail</a></li>
-            <li><a href="https://www.linkedin.com/in/amrit-kalmane-345b3b244/">LinkedIn</a></li>
-            <li><a href="https://github.com/AmritKalmane20">GitHub</a></li>
-            <li><a href="https://instagram.com/amritakalmane">Instagram</a></li>
-        </ul>
-    </section>
+    </div>
+</section>
 
-    <script src="script.js"></script>
+
+
+
+
+<!-- Achievements Section -->
+<section id="achievements" style="text-align: center; padding: 50px;">
+    <h2><strong>Achievements</strong></h2>
+
+    <!-- Container for Certificates -->
+    <div class="certifications-container">
+        <!-- Certification 1 -->
+        <div class="certificate-box">
+            <strong>Certified Artificial Intelligence Fundamentals - Great Learning</strong>
+            <br>
+                <img src="E:/Course Certificate/Amrit_A_Kalmane20241003-75-h44hhq.jpg" alt="Certified Artificial Intelligence Fundamentals" class="certificate-image">
+            </a>
+            <p>AI Fundamentals Certification</p>
+        </div>
+
+        <!-- Certification 2 -->
+        <div class="certificate-box">
+            <strong>Certified Cybersecurity Analyst Job Simulation - Forage</strong>
+            <br>
+                <img src="C:/Users/Amrit Kalmane/Desktop/My_portfolio/images/gmf3ypEXBj2wvfQWC_ifobHAoMjQs9s6bKS_hghGtPaAugmeLepNC_1745774613907_completion_certificate_page-0001.jpg" alt="Certified Cybersecurity Analyst" class="certificate-image">
+            </a>
+            <p>Cybersecurity Analyst Job Simulation Certification</p>
+        </div>
+
+        <!-- Certification 3 (Add more certifications as needed) -->
+        <div class="certificate-box">
+            <strong>Certified Artificial Intelligence Fundamentals</strong>
+            <br>
+                <img src="C:/Users/Amrit Kalmane/Desktop/My_portfolio/images/Amrit Kalmane - Participation Certificate_page-0001.jpg" alt="Certified Artificial Intelligence Fundamentals" class="certificate-image">
+            </a>
+            <p>AI Fundamentals Certification</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h2>Contact Me</h2>
+    <ul class="social-icons">
+        <li>
+            <a href="mailto:amritakalmane@gmail.com">
+                <img src="C:\Users\Amrit Kalmane\Desktop\My_portfolio\images\vecteezy_email-icon-png_31400781.jpg" alt="Email">
+            </a>
+        </li>
+        <li>
+            <a href="https://linkedin.com/in/amrit-kalmane-345b3b244/" target="_blank">
+                <img src="C:\Users\Amrit Kalmane\Desktop\My_portfolio\images\LinkedIn_logo_initials.png" alt="LinkedIn">
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/AmritKalmane20" target="_blank">
+                <img src="C:\Users\Amrit Kalmane\Desktop\My_portfolio\images\vecteezy_github-logo-git-hub-icon-with-text-on-white-and-black_17119660.jpg" alt="GitHub">
+            </a>
+        </li>
+        <li>
+            <a href="https://instagram.com/amritakalmane" target="_blank">
+                <img src="C:\Users\Amrit Kalmane\Desktop\My_portfolio\images\2227.jpg" alt="Instagram">
+            </a>
+        </li>
+    </ul>
+</section>
+
+<script>
+    // Function to toggle the display of the project list with slide-down effect
+    function toggleProjects() {
+        const projectList = document.getElementById("project-list");
+        if (projectList.style.display === "none" || projectList.style.display === "") {
+            projectList.style.display = "block";
+        } else {
+            projectList.style.display = "none";
+        }
+    }
+</script>
+
 </body>
 </html>
